@@ -28,8 +28,8 @@ class Movie(db.Model):
     __tablename__ = 'movies'
 
     movie_id = db.Column(db.Integer,
-                        autoincrement=True,
-                        primary_key=True)
+                         autoincrement=True,
+                         primary_key=True)
     title = db.Column(db.String())
     overview = db.Column(db.Text)
     release_date = db.Column(db.DateTime)
@@ -47,8 +47,8 @@ class Rating(db.Model):
     __tablename__ = 'ratings'
 
     rating_id = db.Column(db.Integer,
-                        autoincrement=True,
-                        primary_key=True)
+                          autoincrement=True,
+                          primary_key=True)
     score = db.Column(db.Integer)
     movie_id = db.Column(db.Integer, db.ForeignKey("movies.movie_id"))
     user_id = db.Column(db.Integer, db.ForeignKey("users.user_id"))
